@@ -1,31 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import About from './components/About';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import Header from './components/Header';
-import Home from './components/Home';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Message from './components/Message';
+import Employee from './components/Employee';
+
+import img1 from './images/empp.jpg'
+import img2 from './images/emp2.jpg'
+import img3 from './images/emp3.jpg'
+//mount
+//unmount
+//update
+/* 
+<Message msg="Hii"  />
+    <Message msg="How are you"  />
+    <Message msg="Testing"  />
+*/
 
 function App() {
   return (
-    <BrowserRouter>
-      <Header />
-      
-       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/contact' element={<Contact />} />
-       </Routes>
-    </BrowserRouter>
-  );
+    <>
+    <div style={{ display:'flex',gap:'14px' }}>
+    <Employee name="Rohit sharma" designation="Front-end Developer" image={img1} />
+    <Employee name="Khushi Sharma" designation="Backend Developer" image={img2} />
+    <Employee name="paviter Sharma" designation="Digital Marketing" image={img3} />
+    </div>
+    </>
+  )
 }
-
-/* 
-<About />
-      <Services />
-      <Contact />
-*/
 
 export default App;
